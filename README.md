@@ -43,7 +43,7 @@ No se usan colecciones nativas de alto nivel (`ArrayList`, `HashMap`, `LinkedLis
 cd backend
 $env:PATH += ";C:\maven\apache-maven-3.9.6\bin"   # solo si mvn no está en el PATH
 mvn spring-boot:run
-```
+```cd ..
 
 Espera hasta ver:
 ```
