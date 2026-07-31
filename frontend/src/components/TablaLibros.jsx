@@ -48,7 +48,7 @@ export default function TablaLibros({ libros, onEditar, onEliminar }) {
                 </span>
               </td>
               <td className="acciones">
-                <button className="btn btn-sm btn-secondary" onClick={() => onEditar(libro)}>
+                <button className="btn btn-sm btn-secondary btn-edit" onClick={() => onEditar(libro)}>
                   Editar
                 </button>
                 <button

@@ -1,4 +1,5 @@
 import { Routes, Route, NavLink } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 import PaginaLibros from './pages/PaginaLibros'
 import PaginaUsuarios from './pages/PaginaUsuarios'
 import PaginaPrestamos from './pages/PaginaPrestamos'
@@ -10,6 +11,23 @@ import './App.css'
  * Define la navegación principal y el enrutamiento de páginas.
  */
 export default function App() {
+  const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'light')
+
+  useEffect(() => {
+    let t
+    try {
+      document.documentElement.classList.add('theme-transition')
+      document.documentElement.setAttribute('data-theme', theme)
+      localStorage.setItem('theme', theme)
+      t = setTimeout(() => {
+        document.documentElement.classList.remove('theme-transition')
+      }, 300)
+    } catch (e) {
+      // ignore
+    }
+    return () => { if (t) clearTimeout(t) }
+  }, [theme])
+
   return (
     <div className="app">
       {/* ── Barra de navegación ── */}
@@ -32,6 +50,16 @@ export default function App() {
             📋 Historial
           </NavLink>
         </nav>
+        <div className="navbar-actions">
+          <button
+            type="button"
+            className="btn btn-ghost theme-toggle"
+            aria-label="Cambiar tema claro/oscuro"
+            onClick={() => setTheme(prev => (prev === 'light' ? 'dark' : 'light'))}
+          >
+            {theme === 'light' ? '🌙' : '☀️'}
+          </button>
+        </div>
       </header>
 
       {/* ── Contenido de la página activa ── */}
