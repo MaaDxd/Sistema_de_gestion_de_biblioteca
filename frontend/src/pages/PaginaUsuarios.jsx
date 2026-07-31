@@ -93,7 +93,7 @@ export default function PaginaUsuarios() {
                       </span>
                     </td>
                     <td>
-                      <button className="btn btn-sm btn-secondary"
+                      <button className="btn btn-sm btn-secondary btn-edit"
                         onClick={() => { setUsuarioEditando(u); limpiarError(); setMostrarFormulario(true) }}>
                         Editar
                       </button>

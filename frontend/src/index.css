@@ -220,21 +220,21 @@ body {
 .btn-edit {
   background: #ff8c00; /* naranja */
   color: #fff;
-  border: 1px solid rgba(0,0,0,0.08);
   padding: .35rem .7rem;
-  transition: transform 180ms ease, box-shadow 180ms ease, filter 160ms ease, background 200ms ease, color 200ms ease;
+    /* no transition: disable animations */
 }
 .btn-edit:hover {
-  transform: translateY(-2px);
+  /* no animation: keep hover effect immediate and without transform */
   box-shadow: 0 10px 30px rgba(15,23,42,0.12);
   filter: brightness(.95);
 }
 
 :root[data-theme="dark"] .btn-edit {
-  background: linear-gradient(180deg,#ff8c00 0%, #ff6f00 100%);
-  color: #111;
-  border: 1px solid rgba(255,255,255,0.03);
-  box-shadow: 0 6px 18px rgba(2,6,23,0.6);
+  /* Keep edit buttons the same orange color in dark mode */
+  background: #ff8c00;
+  color: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 6px 18px rgba(15,23,42,0.06);
 }
 
 /* ── Búsqueda ── */
