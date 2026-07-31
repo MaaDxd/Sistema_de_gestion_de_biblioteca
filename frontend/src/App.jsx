@@ -34,7 +34,7 @@ export default function App() {
       <header className="navbar">
         <div className="navbar-brand">
           <span className="brand-icon">📚</span>
-          <span className="brand-text">Biblioteca</span>
+          <span className="brand-text">Biblioteca N.N</span>
         </div>
         <nav className="navbar-links">
           <NavLink to="/" end className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>

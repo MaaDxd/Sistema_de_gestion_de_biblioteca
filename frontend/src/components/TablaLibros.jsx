@@ -38,7 +38,7 @@ export default function TablaLibros({ libros, onEditar, onEliminar }) {
                   {libro.copiasDisponibles}/{libro.cantidadCopias}
                 </span>
               </td>
-              <td>
+              <td className="copias-cell">
                 <span className={`badge ${
                   libro.estado === 'DISPONIBLE' ? 'badge-success' :
                   libro.estado === 'AGOTADO'    ? 'badge-warning' :

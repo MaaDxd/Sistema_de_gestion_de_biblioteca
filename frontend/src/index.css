@@ -466,3 +466,11 @@ body {
   .navbar       { top: .5rem; padding: .6rem .75rem; gap: .6rem; width: calc(100% - 1.5rem); left: 50%; transform: translateX(-50%); }
   .brand-text   { display: none; }
 }
+
+/* Theme toggle button should have no border */
+.btn-ghost.theme-toggle,
+.theme-toggle.btn-ghost {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
