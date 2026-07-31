@@ -28,12 +28,12 @@ export default function TablaLibros({ libros, onEditar, onEliminar }) {
         <tbody>
           {libros.map(libro => (
             <tr key={libro.id}>
-              <td><code className="id-badge">{libro.id}</code></td>
-              <td><strong>{libro.titulo}</strong></td>
-              <td>{libro.autor}</td>
-              <td><code>{libro.isbn}</code></td>
-              <td>{libro.categoria || '—'}</td>
-              <td>
+              <td className="copias-cell"><code className="id-badge">{libro.id}</code></td>
+              <td className="copias-cell"><strong>{libro.titulo}</strong></td>
+              <td className="copias-cell">{libro.autor}</td>
+              <td className="copias-cell"><code>{libro.isbn}</code></td>
+              <td className="copias-cell">{libro.categoria || '—'}</td>
+              <td className="copias-cell">
                 <span className={libro.copiasDisponibles === 0 ? 'text-danger' : 'text-success'}>
                   {libro.copiasDisponibles}/{libro.cantidadCopias}
                 </span>

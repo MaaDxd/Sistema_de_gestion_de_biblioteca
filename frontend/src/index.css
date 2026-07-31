@@ -270,7 +270,7 @@ body {
 .tabla th {
   background: var(--table-header-bg);
   padding: .7rem 1rem;
-  text-align: left;
+  text-align: center;
   font-size: .8rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -283,6 +283,7 @@ body {
   border-bottom: 1px solid var(--border);
   vertical-align: middle;
 }
+.copias-cell { text-align: center; }
 .tabla tr:last-child td { border-bottom: none; }
 .tabla tr:hover td { background: var(--table-row-hover-bg); }
 
