@@ -64,12 +64,14 @@ export default function App() {
 
       {/* ── Contenido de la página activa ── */}
       <main className="main-content">
-        <Routes>
-          <Route path="/" element={<PaginaLibros />} />
-          <Route path="/usuarios" element={<PaginaUsuarios />} />
-          <Route path="/prestamos" element={<PaginaPrestamos />} />
-          <Route path="/historial" element={<PaginaHistorial />} />
-        </Routes>
+        <div className="page-shell">
+          <Routes>
+            <Route path="/" element={<PaginaLibros />} />
+            <Route path="/usuarios" element={<PaginaUsuarios />} />
+            <Route path="/prestamos" element={<PaginaPrestamos />} />
+            <Route path="/historial" element={<PaginaHistorial />} />
+          </Routes>
+        </div>
       </main>
     </div>
   )
