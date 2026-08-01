@@ -40,7 +40,7 @@ No se usan colecciones nativas de alto nivel (`ArrayList`, `HashMap`, `LinkedLis
 ```powershell
 cd backend
 mvn spring-boot:run
-```
+```cd ..
 
 Espera hasta ver:
 ```

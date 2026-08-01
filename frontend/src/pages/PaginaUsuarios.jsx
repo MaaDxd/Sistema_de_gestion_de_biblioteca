@@ -82,18 +82,18 @@ export default function PaginaUsuarios() {
               <tbody>
                 {usuarios.map(u => (
                   <tr key={u.id}>
-                    <td><code className="id-badge">{u.id}</code></td>
-                    <td><strong>{u.nombre}</strong></td>
-                    <td>{u.identificacion}</td>
-                    <td>{u.correo}</td>
-                    <td>{u.telefono || '—'}</td>
-                    <td>
+                    <td className="copias-cell"><code className="id-badge">{u.id}</code></td>
+                    <td className="copias-cell"><strong>{u.nombre}</strong></td>
+                    <td className="copias-cell">{u.identificacion}</td>
+                    <td className="copias-cell">{u.correo}</td>
+                    <td className="copias-cell">{u.telefono || '—'}</td>
+                    <td className="copias-cell">
                       <span className={`badge ${u.estado === 'ACTIVO' ? 'badge-success' : 'badge-warning'}`}>
                         {u.estado}
                       </span>
                     </td>
-                    <td>
-                      <button className="btn btn-sm btn-secondary"
+                    <td className="copias-cell">
+                      <button className="btn btn-sm btn-secondary btn-edit "
                         onClick={() => { setUsuarioEditando(u); limpiarError(); setMostrarFormulario(true) }}>
                         Editar
                       </button>
