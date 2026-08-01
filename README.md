@@ -24,12 +24,14 @@ No se usan colecciones nativas de alto nivel (`ArrayList`, `HashMap`, `LinkedLis
 | Herramienta | Versión mínima | Verificar con |
 |---|---|---|
 | Java (JDK) | 17+ (probado con 25) | `java -version` |
-| Maven | 3.6.3+ (probado con 3.9.6 y 3.9.16) | `mvn -version` |
+| Maven | 3.8+ | `mvn -version` |
 | Node.js | 18+ (probado con 24) | `node --version` |
 
-> **Si Maven no está instalado**, descárgalo de [https://maven.apache.org/download.cgi](https://maven.apache.org/download.cgi).  
-> Cualquier versión 3.9.x funciona (3.9.6, 3.9.16, etc.).  
-> Extrae el zip en `C:\maven\` y agrega `C:\maven\apache-maven-X.X.X\bin` al PATH del sistema.
+> **Si Maven no está instalado**, está disponible en `C:\maven\apache-maven-3.9.6\bin`.  
+> Agrega al PATH en PowerShell antes de usarlo:
+> ```powershell
+> $env:PATH += ";C:\maven\apache-maven-3.9.6\bin"
+> ```
 
 ---
 
@@ -39,8 +41,9 @@ No se usan colecciones nativas de alto nivel (`ArrayList`, `HashMap`, `LinkedLis
 
 ```powershell
 cd backend
+$env:PATH += ";C:\maven\apache-maven-3.9.6\bin"   # solo si mvn no está en el PATH
 mvn spring-boot:run
-```cd ..
+```
 
 Espera hasta ver:
 ```
@@ -208,4 +211,4 @@ Con el backend corriendo, abre:
 http://localhost:8080/swagger-ui.html
 ```
 
-Desde ahí puedes probar todos los endpoints directamente en el navegador sin necesidad de Postman.
+Desde ahí puedes probar todos los endpoints directamente en el navegador sin necesidad of Postman.
