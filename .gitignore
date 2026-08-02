@@ -14,6 +14,9 @@ target/
 *.war
 *.ear
 
+# Datos persistidos en disco (generados al correr el servidor)
+backend/data/
+
 # Logs
 logs/
 *.log
